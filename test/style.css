@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 1rem 2rem;
+  color: #000;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.settings-icon {
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+}
+
+  .nav-links {
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease;
+    display: none;
+    flex-direction: column;
+    background: #eee;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+  }
+
+.nav-links.active {
+  display: flex;
+}
+
+.temp-unit-buttons, .time-unit-buttons, .speed-unit-buttons, .pressure-unit-buttons, .theme-unit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.temp-unit, .time-unit, .speed-unit, .pressure-unit, .theme-unit{
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.temp-unit.active, .time-unit.active, .speed-unit.active, .pressure-unit.active, .theme-unit.active,
+.temp-unit[aria-checked="true"], .time-unit[aria-checked="true"], .speed-unit[aria-checked="true"], .pressure-unit[aria-checked="true"], .theme-unit[aria-checked="true"] {
+  border:2px solid black;
+}
+
+li{
+  width:fit-content;
+  padding: 5px;
+}
+
+label{
+  font-weight: bold;
+}

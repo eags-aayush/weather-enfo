@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e9fdc1c043.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/sun.css">
+    <link rel="stylesheet" href="css/moon.css">
+    <link rel="stylesheet" href="css/alert.css">
+    <link rel="stylesheet" href="css/hour forecast.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="location"></h1>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li class="location-input-container">
+                <label>Enter Location</label>
+                <div class="location-input-area">
+                    <input class="location-input" type="text" value="India">
+                    <button class="click"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+                </div>
+            </li>
+
+            <li class="temp-unit-conatiner">
+                <label>Temperature Unit</label>
+                <div class="temp-unit-buttons" role="radiogroup">
+                    <button class="temp-unit active" data-unit="c" role="radio">°C</button>
+                    <button class="temp-unit" data-unit="f" role="radio">°F</button>
+                </div>
+            </li>
+
+            <li class="time-unit-conatiner">
+                <label>Time Format</label>
+                <div class="time-unit-buttons" role="radiogroup">
+                    <button class="time-unit active" data-unit="12" role="radio">12 H</button>
+                    <button class="time-unit" data-unit="24" role="radio">24 H</button>
+                </div>
+            </li>
+
+            <li class="distance-unit-conatiner">
+                <label>Distance Unit</label>
+                <div class="distance-unit-buttons" role="radiogroup">
+                    <button class="distance-unit active" data-unit="km" role="radio">Km</button>
+                    <button class="distance-unit" data-unit="miles" role="radio">Miles</button>
+                </div>
+            </li>
+
+            <li class="pressure-unit-conatiner">
+                <label>Pressure Unit</label>
+                <div class="pressure-unit-buttons" role="radiogroup">
+                    <button class="pressure-unit active" data-unit="mb" role="radio">mb (millibar)</button>
+                    <button class="pressure-unit" data-unit="in" role="radio">in (inHg)</button>
+                </div>
+            </li>
+
+            <li class="theme-unit-conatiner">
+                <label>Theme</label>
+                <div class="theme-unit-buttons" role="radiogroup">
+                    <button class="theme-unit active" data-unit="light" role="radio">Light</button>
+                    <button class="theme-unit" data-unit="dark" role="radio">Dark</button>
+                    <button class="theme-unit" data-unit="weather" role="radio">Weather</button>
+                </div>
+            </li>.
+
+            <li class="theme-unit-conatiner">
+                <label>Icon Set</label>
+                <div class="theme-unit-buttons" role="radiogroup">
+                    <button class="theme-unit active" data-unit="light" role="radio">Light</button>
+                    <button class="theme-unit" data-unit="dark" role="radio">Dark</button>
+                    <button class="theme-unit" data-unit="weather" role="radio">Weather</button>
+                </div>
+            </li>
+        </ul>
+        <div class="settings-icon" id="settingsIcon">
+            <i id="icon" class="fa-solid fa-gear"></i>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-info">
+            <div class="temp"></div>
+            <div class="weather-condition"></div>
+            <div class="high-container">
+                <span>High </span>
+                <span class="high-info"></span>
+            </div>
+            <div class="low-container">
+                <span>Low </span>
+                <span class="low-info"></span>
+            </div>
+            <div class="feels-container">
+                <span>Feels like </span>
+                <span class="feels-info"></span>
+            </div>
+        </div>
+        <div class="hero-icon">
+            <img src="">
+        </div>
+    </div>
+    
+    <div class="hour-forcast-container"></div>
+
+    <div class="info">
+
+        <div class="aqi-container">
+            <span>AQI</span>
+            <span class="aqi-info "></span>
+        </div>
+        <div class="uv-container">
+            <span>UV Index</span>
+            <span class="uv-info "></span>
+        </div>
+        <div class="humidity-container">
+            <span>Humidity</span>
+            <span class="humidity-info "></span>
+        </div>
+        <div class="precipitation-container">
+            <span>Precipitation</span>
+            <span class="precipitation-info "></span>
+        </div>
+        <div class="wind-container">
+            <span>Wind</span>
+            <span class="wind-info "></span>
+        </div>
+        <div class="dew-container">
+            <span>Dew point</span>
+            <span class="dew-info "></span>
+        </div>
+        <div class="pressure-container">
+            <span>Pressure</span>
+            <span class="pressure-info "></span>
+        </div>
+        <div class="visibility-container">
+            <span>Visibility</span>
+            <span class="visibility-info "></span>
+        </div>
+    </div>
+
+    <div class="sun-container">
+        <div class="sunrise">
+            <span>Sunrise</span>
+            <span class="sunrise-info"></span>
+        </div>
+        <img src="">
+        <div class="sunset">
+            <span>Sunset</span>
+            <span class="sunset-info"></span>
+        </div>
+    </div>
+
+    <div class="moon-container">
+        <div class="moonrise">
+            <span>Moonrise</span>
+            <span class="moonrise-info"></span>
+        </div>
+
+        <div class="moonstate">
+            <img class="moonstate-img" src="">
+            <span class="moonstate-info"></span>
+        </div>
+
+        <div class="moonset">
+            <span>Moonset</span>
+            <span class="moonset-info"></span>
+        </div>
+    </div>
+
+    <div class="alert">
+        <span>Alerts in</span>
+        <ul></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

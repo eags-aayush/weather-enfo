@@ -1,0 +1,26 @@
+@import 'variables.css';
+
+.moon-container{
+    background-color: var(--div);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.moonrise, .moonset, .moonstate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.moonstate{
+    gap:5px;
+}
+
+.moonrise-info, .moonset-info, .moonstate-info{
+    font-weight: bold;
+}

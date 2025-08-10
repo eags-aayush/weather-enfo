@@ -1,0 +1,116 @@
+.navbar {
+  margin-top: 24px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #000;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.settings-icon {
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+}
+
+  .nav-links {
+    border-bottom: 3px dotted black;
+    border-radius: 15px;
+    padding-left: 50px;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 97vw;
+    min-height: 100%;
+    padding: 1rem;
+  }
+
+.nav-links.active {
+  display: flex;
+}
+
+.location-input{
+  border-radius: 10px;
+  padding: 5px;
+  margin-left:30px;
+  width:200px;
+  cursor:text;
+  font-size: 15px;
+  border: none;
+  border: 2px solid black;
+}
+
+.location-input-area{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.click{
+  border:none;
+  background-color: #fff;
+}
+
+.fa-magnifying-glass-location{
+  border: none;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.temp-unit-buttons, .time-unit-buttons, .distance-unit-buttons, .pressure-unit-buttons, .theme-unit-buttons {
+  margin-left:30px;
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.temp-unit, .time-unit, .distance-unit, .pressure-unit, .theme-unit{
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.temp-unit.active, .time-unit.active, .distance-unit.active, .pressure-unit.active, .theme-unit.active,
+.temp-unit[aria-checked="true"], .time-unit[aria-checked="true"], .distance-unit[aria-checked="true"], .pressure-unit[aria-checked="true"], .theme-unit[aria-checked="true"] {
+  border:2px solid black;
+}
+
+li{
+  width:fit-content;
+  padding: 5px;
+}
+
+label{
+  margin-left:30px;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+:root{
+    --bg: #fff;
+    --color:#000;
+    --div: #eee;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--color);
+    height: 100%;
+}

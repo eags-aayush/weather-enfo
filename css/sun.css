@@ -1,0 +1,22 @@
+@import 'variables.css';
+
+.sun-container{
+    background-color: var(--div);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sunrise, .sunset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sunrise-info, .sunset-info{
+    font-weight: bold;
+}

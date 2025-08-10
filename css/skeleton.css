@@ -1,0 +1,28 @@
+@import 'variables.css';
+
+.skeleton{
+    background-color: var(--div);
+    width:fit-content;
+    border-radius: 15px;
+    padding: 5px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0% {
+        color: var(--div);
+        background-color: var(--div);
+    }
+    50% {
+        color: #ccc;
+        background-color: #ccc;
+    }
+    100% {
+        color: var(--div);
+        background-color: var(--div);
+    }
+}
+
+.hidden{
+    display: none;
+}

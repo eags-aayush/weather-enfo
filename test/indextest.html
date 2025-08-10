@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temp Unit Toggle</title>
+  <style>
+    .unit-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .unit {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .unit.active {
+      background: #f39c12;
+    }
+  </style>
+</head>
+<body>
+
+<div class="unit-buttons">
+  <button class="unit active" data-unit="C">°C</button>
+  <button class="unit" data-unit="F">°F</button>
+</div>
+
+<script>
+  // Global variable
+  let selectedUnit = "C"; // Default
+
+  const unitButtons = document.querySelectorAll(".unit");
+
+  unitButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Update styles
+      unitButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Set global variable
+      selectedUnit = button.dataset.unit;
+      console.log("Selected:", selectedUnit); // <-- This should log when clicked
+
+      // You can now use `selectedUnit` globally
+      // For example:
+      useUnitInFunction();
+    });
+  });
+
+  function useUnitInFunction() {
+    console.log("Using selected unit in function:", selectedUnit);
+  }
+</script>
+
+</body>
+</html>

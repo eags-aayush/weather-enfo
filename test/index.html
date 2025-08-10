@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar with Settings Icon</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/e9fdc1c043.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul class="nav-links active" id="navLinks">
+
+      <li class="temp-unit-conatiner">
+        <label>Temperature Unit</label>
+        <div class="temp-unit-buttons" role="radiogroup">
+          <button class="temp-unit active" data-unit="C" role="radio">°C</button>
+          <button class="temp-unit" data-unit="F" role="radio">°F</button>
+        </div>
+      </li>
+
+      <li class="time-unit-conatiner">
+        <label>Time Format</label>
+        <div class="time-unit-buttons" role="radiogroup">
+          <button class="time-unit active" data-unit="12" role="radio">12 H</button>
+          <button class="time-unit" data-unit="24" role="radio">24 H</button>
+        </div>
+      </li>
+
+      <li class="speed-unit-conatiner">
+        <label>Speed Unit</label>
+        <div class="speed-unit-buttons" role="radiogroup">
+          <button class="speed-unit active" data-unit="kmph" role="radio">km/h</button>
+          <button class="speed-unit" data-unit="mph" role="radio">m/h</button>
+        </div>
+      </li>
+
+      <li class="pressure-unit-conatiner">
+        <label>Pressure Unit</label>
+        <div class="spressure-unit-buttons" role="radiogroup">
+          <button class="pressure-unit active" data-unit="mb" role="radio">mb (millibar)</button>
+          <button class="pressure-unit" data-unit="in" role="radio">in (inHg)</button>
+        </div>
+      </li>
+
+      <li class="theme-unit-conatiner">
+        <label>Theme</label>
+        <div class="theme-unit-buttons" role="radiogroup">
+          <button class="theme-unit active" data-unit="light" role="radio">Light</button>
+          <button class="theme-unit" data-unit="dark" role="radio">Dark</button>
+          <button class="theme-unit" data-unit="weather" role="radio">Weather</button>
+        </div>
+      </li>
+
+      <li>Icon Set</li>
+    </ul>
+    <div class="settings-icon" id="settingsIcon">
+      <i id="icon" class="fa-solid fa-gear"></i>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
