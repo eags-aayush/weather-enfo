@@ -4,6 +4,12 @@
     --div: #eee;
 }
 
+.dark{
+    --bg: #000;
+    --color: #fff;
+    --div: #333;
+}
+
 body{
     background-color: var(--bg);
     color: var(--color);

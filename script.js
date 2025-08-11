@@ -202,8 +202,7 @@ const hero = () => {
     low.innerText = `${weatherData.forecast.forecastday[0].day['mintemp_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     feels.innerText = `${weatherData.current['feelslike_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     hero_icon.childNodes[1].src = weatherData.current.condition.icon;
-
-    
+    themeSelectedUnit === "dark" ? document.body.classList.add("dark") : document.body.classList.remove("dark");    
 };
 
 const hourForcast = () => {
