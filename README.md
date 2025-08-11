@@ -172,8 +172,15 @@ Install weatherapp using one of the following methods:
 
 ## 📌 Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>Select which API to use.</strike>  
+- [X] **`Task 2`**: <strike>Code HTML according to the API.</strike>  
+- [X] **`Task 3`**: <strike>Sketch design on pen and paper.</strike>  
+- [X] **`Task 4`**: <strike>Design using CSS.</strike>  
+- [X] **`Task 5`**: <strike>Use JavaScript for functionality.</strike>  
+- [X] **`Task 6`**: <strike>Add dummy loading animation in CSS.</strike>  
+- [X] **`Task 7`**: <strike>Add multiple unit preferences (temperature, pressure, time format, distance).</strike>  
+- [X] **`Task 8`**: <strike>Add theme switching feature.</strike>  
+
 
 ---
+
