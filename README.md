@@ -1,9 +1,9 @@
 <p align="center"><h1 align="center">Weather Enfo</h1></p>
 
 <p align="center">
-	<img src="https://img.shields.io/github/last-commit/eags-aayush/weatherapp?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/eags-aayush/weatherapp?style=default&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/eags-aayush/weatherapp?style=default&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/github/last-commit/eags-aayush/weather-enfo?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/eags-aayush/weather-enfo?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/eags-aayush/weather-enfo?style=default&color=0080ff" alt="repo-language-count">
 </p>
 <p align="center"><!-- default option, no dependency badges. -->
 </p>
@@ -55,7 +55,7 @@
 ## 📁 Project Structure
 
 ```sh
-└── weatherapp/
+└── weather-enfo/
     ├── README.md
     ├── css
     │   ├── alert.css
@@ -84,25 +84,25 @@
 
 ### ☑️ Prerequisites
 
-Before getting started with weatherapp, ensure your runtime environment meets the following requirements:
+Before getting started with weather-enfo, ensure your runtime environment meets the following requirements:
 
 - **Programming Language:** CSS
 
 
 ### ⚙️ Installation
 
-Install weatherapp using one of the following methods:
+Install weather-enfo using one of the following methods:
 
 **Build from source:**
 
-1. Clone the weatherapp repository:
+1. Clone the weather-enfo repository:
 ```sh
-❯ git clone https://github.com/eags-aayush/weatherapp
+❯ git clone https://github.com/eags-aayush/weather-enfo
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd weatherapp
+❯ cd weatheenfo
 ```
 ---
 
@@ -119,6 +119,7 @@ Install weatherapp using one of the following methods:
 
 
 ---
+
 
 
 
