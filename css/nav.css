@@ -82,6 +82,8 @@
   border-bottom: 2px solid var(--color);
   border-radius: 5px;
   padding: 3px;
+  color: var(--color);
+  cursor: pointer;
   margin-left: 10px;
   font-size: 25px;
 }
