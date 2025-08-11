@@ -106,7 +106,7 @@ let feels = document.querySelector(".feels-info");
 let hero_icon = document.querySelector(".hero-icon");
 
 //Hour forcast section
-let forcastTime = document.querySelector(".time"); 
+let forcastTime = document.querySelector(".time");
 let forcastImg = document.querySelector(".forcast>img");
 let forcastTemp = document.querySelector(".hour-temp");
 
@@ -176,8 +176,8 @@ const skeleton = () => {
 };
 
 //Fetching weather data
-async function fetchWeather(){
-    try{
+async function fetchWeather() {
+    try {
         skeleton();
         let url = `https://api.weatherapi.com/v1/forecast.json?key=${apikey} &q=${locationValue.value}&days=1&aqi=yes&alerts=yes`;
         const response = await fetch(url);
@@ -186,15 +186,15 @@ async function fetchWeather(){
         console.log(data);
 
         useWeatherData();
-    } catch(err) {
-        console.error('Got an error:', err);     
+    } catch (err) {
+        console.error('Got an error:', err);
     }
 }
 
 //Using weather data
 
 const hero = () => {
-    locationArea.innerText = weatherData.location.name+", "+weatherData.location.country;
+    locationArea.innerText = weatherData.location.name + ", " + weatherData.location.country;
     temp.innerText = `${weatherData.current['temp_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     weather_condition.innerText = weatherData.current.condition.text;
     temp.innerText = `${weatherData.current['temp_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
@@ -202,7 +202,7 @@ const hero = () => {
     low.innerText = `${weatherData.forecast.forecastday[0].day['mintemp_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     feels.innerText = `${weatherData.current['feelslike_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     hero_icon.childNodes[1].src = weatherData.current.condition.icon;
-    themeSelectedUnit === "dark" ? document.body.classList.add("dark") : document.body.classList.remove("dark");    
+    themeSelectedUnit === "dark" ? document.body.classList.add("dark") : document.body.classList.remove("dark");
 };
 
 const hourForcast = () => {
@@ -211,8 +211,8 @@ const hourForcast = () => {
 
     let currTime = new Date().getHours();
 
-    for(time of weatherData.forecast.forecastday[0].hour){
-        if(time.time.slice(11,13) >= currTime){
+    for (time of weatherData.forecast.forecastday[0].hour) {
+        if (time.time.slice(11, 13) >= currTime) {
 
             const newDiv = document.createElement("div");
             newDiv.className = "forcast";
@@ -220,7 +220,12 @@ const hourForcast = () => {
 
             const newTime = document.createElement("span");
             newTime.className = "time";
-            newTime.textContent = time.time.slice(11,16);
+            newTime.textContent = timeSelectedUnit === "12"
+                ? (([h, m]) => `${h % 12 || 12}:${m.toString().padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`)
+                    (time.time.slice(11, 16).split(':').map(Number))
+                : time.time.slice(11, 16);
+
+
             newDiv.appendChild(newTime);
 
             const newImg = document.createElement("img");
@@ -239,45 +244,45 @@ const hourForcast = () => {
 const info = () => {
     //AQI
     const aqiData = weatherData.current.air_quality["us-epa-index"]
-    if(aqiData == 1){
+    if (aqiData == 1) {
         aqi.innerText = "Good";
-        aqi.style.color= "green";
+        aqi.style.color = "green";
     }
-    else if(aqiData == 2){
+    else if (aqiData == 2) {
         aqi.innerText = "Moderate";
-        aqi.style.color= "yellow";
+        aqi.style.color = "yellow";
     }
-    else if(aqiData == 3){
+    else if (aqiData == 3) {
         aqi.innerText = "Unhealthy for Sensitive Groups";
-        aqi.style.color= "orange";
+        aqi.style.color = "orange";
     }
-    else if(aqiData == 4){
+    else if (aqiData == 4) {
         aqi.innerText = "Unhealthy";
-        aqi.style.color= "red";
+        aqi.style.color = "red";
     }
-    else if(aqiData == 5){
+    else if (aqiData == 5) {
         aqi.innerText = "Very Unhealthy";
-        aqi.style.color= "purple";
+        aqi.style.color = "purple";
     }
-    else if(aqiData == 6){
+    else if (aqiData == 6) {
         aqi.innerText = "Hazardous";
-        aqi.style.color= "maroon";
+        aqi.style.color = "maroon";
     }
 
     //UV
-    if(weatherData.current.uv <=2)
+    if (weatherData.current.uv <= 2)
         uv.innerText = `Low (${weatherData.current.uv})`;
-    else if(weatherData.current.uv >=3 && weatherData.current.uv <=5)
+    else if (weatherData.current.uv >= 3 && weatherData.current.uv <= 5)
         uv.innerText = `Moderate (${weatherData.current.uv})`;
-    else if(weatherData.current.uv >=6 && weatherData.current.uv <=7)
+    else if (weatherData.current.uv >= 6 && weatherData.current.uv <= 7)
         uv.innerText = `Unhealthy (${weatherData.current.uv})`;
-    else if(weatherData.current.uv >=8 && weatherData.current.uv <=10)
+    else if (weatherData.current.uv >= 8 && weatherData.current.uv <= 10)
         uv.innerText = `Very Unhealthy (${weatherData.current.uv})`;
-    else if(weatherData.current.uv >=11)
+    else if (weatherData.current.uv >= 11)
         uv.innerText = `Hazardous (${weatherData.current.uv})`;
 
-    humidity.innerText = weatherData.current.humidity+"%";
-    precipitation.innerText = weatherData.current.precip_mm+"%";
+    humidity.innerText = weatherData.current.humidity + "%";
+    precipitation.innerText = weatherData.current.precip_mm + "%";
     wind.innerText = `${weatherData.current['wind_' + (distanceSelectedUnit === 'km' ? 'kph' : 'mph')]} ${distanceSelectedUnit === 'km' ? 'km/hr' : 'mph'}`;
     dew.innerText = `${weatherData.current['dewpoint_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
     pressurue.innerText = `${weatherData.current['pressure_' + pressureSelectedUnit]} ${pressureSelectedUnit === 'mb' ? ' mb' : ' inHg'}`;
@@ -285,15 +290,51 @@ const info = () => {
 };
 
 const sun = () => {
-    sunrise.innerText = weatherData.forecast.forecastday[0].astro.sunrise;
-    sunset.innerText = weatherData.forecast.forecastday[0].astro.sunset;
+    sunrise.innerText = timeSelectedUnit === "24"
+        ? (() => {
+            let [time, period] = weatherData.forecast.forecastday[0].astro.sunrise.split(" ");
+            let [h, m] = time.split(":").map(Number);
+            if (period === "PM" && h !== 12) h += 12;
+            if (period === "AM" && h === 12) h = 0;
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+        })()
+        : weatherData.forecast.forecastday[0].astro.sunrise;
+
+    sunset.innerText = timeSelectedUnit === "24"
+        ? (() => {
+            let [time, period] = weatherData.forecast.forecastday[0].astro.sunset.split(" ");
+            let [h, m] = time.split(":").map(Number);
+            if (period === "PM" && h !== 12) h += 12;
+            if (period === "AM" && h === 12) h = 0;
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+        })()
+        : weatherData.forecast.forecastday[0].astro.sunset;
+
 };
 
 const moon = () => {
-    moonrise.innerText = weatherData.forecast.forecastday[0].astro.moonrise;
-    moonset.innerText = weatherData.forecast.forecastday[0].astro.moonset;
+    moonrise.innerText = timeSelectedUnit === "24"
+        ? (() => {
+            let [time, period] = weatherData.forecast.forecastday[0].astro.moonrise.split(" ");
+            let [h, m] = time.split(":").map(Number);
+            if (period === "PM" && h !== 12) h += 12;
+            if (period === "AM" && h === 12) h = 0;
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+        })()
+        : weatherData.forecast.forecastday[0].astro.moonrise;
+
+    moonset.innerText = timeSelectedUnit === "24"
+        ? (() => {
+            let [time, period] = weatherData.forecast.forecastday[0].astro.moonset.split(" ");
+            let [h, m] = time.split(":").map(Number);
+            if (period === "PM" && h !== 12) h += 12;
+            if (period === "AM" && h === 12) h = 0;
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+        })()
+        : weatherData.forecast.forecastday[0].astro.moonset;
+
     mooninfo.innerText = weatherData.forecast.forecastday[0].astro.moon_phase;
-    moonimg.src = `/moon phases/${weatherData.forecast.forecastday[0].astro.moon_phase}.png`; 
+    moonimg.src = `/moon phases/${weatherData.forecast.forecastday[0].astro.moon_phase}.png`;
 };
 
 const alert = () => {
@@ -301,12 +342,12 @@ const alert = () => {
     let alul = document.querySelector(".alert>ul");
     alul.innerHTML = "";
 
-    if(alerts.length == 0){
+    if (alerts.length == 0) {
         alertTitle.innerText = `No alerts in ${locationArea.innerText}`;
-    } else{
+    } else {
         alertTitle.innerText = `Alerts in ${locationArea.innerText}`;
 
-        for(const alts of alerts){
+        for (const alts of alerts) {
             let desc = alts.desc;
             let inst = alts.instruction;
 
