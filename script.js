@@ -271,11 +271,11 @@ const info = () => {
     else if(weatherData.current.uv >=3 && weatherData.current.uv <=5)
         uv.innerText = `Moderate (${weatherData.current.uv})`;
     else if(weatherData.current.uv >=6 && weatherData.current.uv <=7)
-        uv.innerText = `Moderate (${weatherData.current.uv})`;
+        uv.innerText = `Unhealthy (${weatherData.current.uv})`;
     else if(weatherData.current.uv >=8 && weatherData.current.uv <=10)
-        uv.innerText = `Moderate (${weatherData.current.uv})`;
+        uv.innerText = `Very Unhealthy (${weatherData.current.uv})`;
     else if(weatherData.current.uv >=11)
-        uv.innerText = `Moderate (${weatherData.current.uv})`;
+        uv.innerText = `Hazardous (${weatherData.current.uv})`;
 
     humidity.innerText = weatherData.current.humidity+"%";
     precipitation.innerText = weatherData.current.precip_mm+"%";
