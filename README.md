@@ -17,7 +17,6 @@
 - [📍 Overview](#-overview)
 - [👾 Features](#-features)
 - [📁 Project Structure](#-project-structure)
-  - [📂 Project Index](#-project-index)
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
@@ -79,71 +78,6 @@
     ├── script.js
 ```
 
-
-### 📂 Project Index
-<details open>
-	<summary><b><code>WEATHERAPP/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/script.js'>script.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/index.html'>index.html</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- css Submodule -->
-		<summary><b>css</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/hour forecast.css'>hour forecast.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/variables.css'>variables.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/skeleton.css'>skeleton.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/moon.css'>moon.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/alert.css'>alert.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/info.css'>info.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/hero.css'>hero.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/nav.css'>nav.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/eags-aayush/weatherapp/blob/master/css/sun.css'>sun.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
-
----
 ## 🚀 Getting Started
 
 ### ☑️ Prerequisites
@@ -183,4 +117,5 @@ Install weatherapp using one of the following methods:
 
 
 ---
+
 
