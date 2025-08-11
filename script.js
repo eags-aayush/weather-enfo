@@ -183,6 +183,7 @@ async function fetchWeather(){
         const response = await fetch(url);
         const data = await response.json();
         weatherData = data;
+        console.log(data);
 
         useWeatherData();
     } catch(err) {
@@ -280,7 +281,7 @@ const info = () => {
     precipitation.innerText = weatherData.current.precip_mm+"%";
     wind.innerText = `${weatherData.current['wind_' + (distanceSelectedUnit === 'km' ? 'kph' : 'mph')]} ${distanceSelectedUnit === 'km' ? 'km/hr' : 'mph'}`;
     dew.innerText = `${weatherData.current['dewpoint_' + tempSelectedUnit]} ${tempSelectedUnit === 'c' ? '°C' : '°F'}`;
-    pressurue.innerText = weatherData.current.pressure_mb+"mb";
+    pressurue.innerText = `${weatherData.current['pressure_' + pressureSelectedUnit]} ${pressureSelectedUnit === 'mb' ? ' mb' : ' inHg'}`;
     visibility.innerText = `${weatherData.current['vis_' + distanceSelectedUnit]} ${distanceSelectedUnit === 'km' ? 'Km' : 'miles'}`;
 };
 
