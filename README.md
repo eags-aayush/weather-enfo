@@ -78,6 +78,8 @@
     ├── script.js
 ```
 
+---
+
 ## 🚀 Getting Started
 
 ### ☑️ Prerequisites
@@ -117,5 +119,6 @@ Install weatherapp using one of the following methods:
 
 
 ---
+
 
 
