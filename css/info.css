@@ -27,7 +27,7 @@
     background-color: var(--div);
     padding: 5px;
     border-radius: 15px;
-    width: calc(83vw/2);
+    width: calc(50% - 18px);
     display: flex;
     flex-direction: column;
     justify-content: center;
